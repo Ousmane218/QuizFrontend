@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Home, ListChecks, PlusCircle, Settings, User } from "lucide-react"
+import { Home, ListChecks, PlusCircle, Settings, Trophy, User } from "lucide-react"
 
 import {
   Sidebar,
@@ -28,6 +28,11 @@ const items = [
     title: "Create Quiz",
     url: "#",
     icon: PlusCircle,
+  },
+  {
+    title: "Leaderboard",
+    url: "#",
+    icon: Trophy,
   },
   {
     title: "Settings",

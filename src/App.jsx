@@ -6,6 +6,7 @@ import { QuizCard } from "@/components/quiz-card"
 import { ScoreTable } from "@/components/score-table"
 import { QuizPlay } from "@/components/quiz-play"
 import { CreateQuiz } from "@/components/create-quiz"
+import { Leaderboard } from "@/components/leaderboard"
 import { Separator } from "@/components/ui/separator"
 import api from "@/lib/api"
 import { Loader2 } from "lucide-react"
@@ -203,6 +204,12 @@ export default function App() {
                   onCreated={handleQuizCreated} 
                   onCancel={() => setActiveTab("home")} 
                 />
+              </section>
+            )}
+
+            {activeTab === "leaderboard" && (
+              <section className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <Leaderboard />
               </section>
             )}
 

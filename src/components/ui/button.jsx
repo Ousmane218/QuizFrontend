@@ -1,3 +1,5 @@
+"use client"
+
 import { Button as ButtonPrimitive } from "@base-ui/react/button"
 import { cva } from "class-variance-authority";
 
@@ -46,11 +48,12 @@ function Button({
   size = "default",
   ...props
 }) {
+  const { asChild: _asChild, ...restProps } = props
   return (
     <ButtonPrimitive
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
-      {...props} />
+      {...restProps} />
   );
 }
 
